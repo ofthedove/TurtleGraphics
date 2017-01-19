@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TurtleGraphics"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="483" Width="606">
     <Grid>
-        
+        <Image x:Name="outputImage" Margin="10,10,10,205"/>
+        <TextBox x:Name="inputTextBox" Margin="10,0,10,41" TextWrapping="Wrap" Text="F+F-FF" Height="93" VerticalAlignment="Bottom" MinLines="2"/>
+        <Label x:Name="loopLabel1" Content="Loop" Margin="10,0,0,10" HorizontalAlignment="Left" Width="37" Height="26" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="loopsTextBox" HorizontalAlignment="Left" Height="23" Margin="52,0,0,10" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="53" Text="1" TextAlignment="Center"/>
+        <Label x:Name="loopLabel2" Content="times" HorizontalAlignment="Left" Margin="110,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="-0.763,-0.346"/>
+        <Button x:Name="runButton" Content="Run" Margin="0,0,10,10" Cursor="" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <Label x:Name="inputLabel" Content="Expression" HorizontalAlignment="Left" Margin="10,0,0,134" VerticalAlignment="Bottom"/>
+        <Label x:Name="startLabel" Content="Start:" HorizontalAlignment="Left" Margin="10,0,0,170" VerticalAlignment="Bottom"/>
+        <Grid Height="35" Margin="52,0,10,165" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="startCenterRB" Content="Middle Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.059,1.533" Grid.Column="2" GroupName="StartLocation"/>
+            <RadioButton x:Name="startBotCentRB" Content="Bottom Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" GroupName="StartLocation"/>
+            <RadioButton x:Name="startBotLeftRB" Content="Bottom Left" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" GroupName="StartLocation" IsChecked="True"/>
+        </Grid>
+
     </Grid>
 </Window>
